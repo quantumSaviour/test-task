@@ -46,10 +46,38 @@ body {
 .sidebar {
 	position: fixed;
 	width: 92px;
+/*	width: 260px;*/
 	left: 0;
 	top: 0;
 	bottom: 0;
 	background-color: #F0F0F0;
+	padding-top: 3.8rem;
+
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.sidebar__nav {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	text-align: center;
+	align-items: center;
+}
+
+.nav__search {
+	margin: 0 auto;
+	width: 80%;
+	margin-bottom: 1rem;
+}
+
+.list__item:first-child {
+	margin-bottom: 1rem;
+}
+
+.list__item {
+	margin-bottom: 1rem;
 }
 
 .container {
@@ -95,6 +123,10 @@ body {
 
 .preparation__cards {
 	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: center;
+	gap: 15px;
 }
 
 .preparation__card {
@@ -104,11 +136,12 @@ body {
 	align-items: center;
 	background-color: #8E8FF1;
 	padding: 25px 31px 36px 31px;
-	max-width: 313px;
+/*	max-width: 313px;*/
 	border-radius: 8px;
-	min-width: 313px;
+	flex-basis: 313px;
 	max-height: 22.5rem;
-	margin-right: 1rem;
+	background-repeat: no-repeat;
+/*	margin-right: 1rem;*/
 	color: #fff;
 }
 
@@ -480,4 +513,84 @@ body {
 .write__btn span {
 	font-size: 9px;
 	line-height: 11px;
+}
+
+@media screen and (max-width: 1430px) {
+	.main__content {
+		flex-direction: column;
+	}
+}
+
+@media screen and (max-width: 1080px) {
+	.item__inner {
+	  flex-direction: column;
+	  text-align: center;
+	  gap: 15px;
+	}
+
+	.preparation__cards {
+		justify-content: center;
+	}
+
+	.item__logo {
+		margin: 0;
+	}
+
+	.item__inner .btn {
+		margin: 0;
+	}
+
+	.occupation,
+	 {
+		display: flex;
+	    flex-direction: column;
+	    align-items: center;
+	}
+
+	.occupation__items {
+		display: flex;
+		flex-direction: column;
+	}
+
+	.find {
+/*		max-width: 80%;*/
+	}
+}
+
+@media screen and (max-width: 538px) {
+	.container {
+		padding: 20px;
+/*	    padding-left: 20px;*/
+	    margin-left: 40px;
+	}
+
+	.header {
+/*		text-align: center;*/
+		margin-bottom: 2rem;
+	}
+
+	.occupation__items, .item--find {
+		max-width: 80%;
+	}
+
+	.main__title {
+/*		text-align: center;*/
+	}
+
+	.preparation__cards {
+	  justify-content: flex-start;
+	}
+
+	.find {
+		max-width: 100%;
+	}
+
+	.sidebar {
+		width: 50px;
+	}
+
+	.aside {
+/*		margin: 0 auto;*/
+	}
+
 }
